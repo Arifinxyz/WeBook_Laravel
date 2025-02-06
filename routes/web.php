@@ -6,4 +6,4 @@ use App\Http\Controllers\BookController;
 
 Route::get('/', [BookController::class, 'index'])->name('book.index');
 Route::get('/book_desc/{id}', [BookController::class, 'show'])->name('book.show');
-Route::get('/book_content/{id}', [BookController::class, 'content'])->name('book.book_content');
+Route::get('book/{id}/content', [BookController::class, 'content']);

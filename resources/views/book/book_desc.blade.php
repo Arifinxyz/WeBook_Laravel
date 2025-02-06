@@ -9,7 +9,7 @@
                 <h1>{{ $book->tittle }}</h1>
                 <p>Description: {{ $book->description }}</p>
             </div>
-            <a href="/book_content/{{ $book->id }}">baca buku</a>
+            <a href="/book/{{ $book->id }}/content">baca buku</a>
         </div>
     </div>
 </x-layout>

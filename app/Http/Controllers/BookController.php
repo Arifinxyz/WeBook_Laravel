@@ -17,11 +17,13 @@ class BookController extends Controller
     $book = Book::findOrFail($id);
     return view('book.book_desc', compact('book'));
 }
-
+    
     public function content($id)
     {
         $book = Book::findOrFail($id);
-        return view('book.book_content', compact('book'));
+        $pdfUrl = $book->content;
+        return view('book.book_content', compact('book', 'pdfUrl'));
     }
+    
 }
 

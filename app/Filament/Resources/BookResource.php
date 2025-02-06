@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\BookResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\BookResource\RelationManagers;
+use Filament\Forms\Components\Textarea;
 
 class BookResource extends Resource
 {
@@ -36,7 +37,7 @@ class BookResource extends Resource
                         '3:4'
                     ]),
                 TextInput::make('tittle'),
-                TextInput::make('description'),
+                Textarea::make('description'),
                 FileUpload::make('content')
                     ->directory('book/content')
                     ->acceptedFileTypes(['application/pdf']),
