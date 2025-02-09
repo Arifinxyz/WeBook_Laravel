@@ -1,5 +1,6 @@
 <x-layout>
     <h1>home</h1>
+    <a href="/login">Login</a>
         @if ($books)
             @foreach ( $books as $book)
                 <div class="card_book">
