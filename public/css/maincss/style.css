@@ -1,3 +1,12 @@
 body {
     background-color: #ebebeb;
 }
+
+.book_card {
+}
+
+.book_cover {
+   width: 15vh;
+   height: calc(14vh * 1.5);
+   object-fit: cover;
+}

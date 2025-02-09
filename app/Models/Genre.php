@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Book extends Model
+class Genre extends Model
 {
     use HasFactory;
     protected $guarded = [];
 
-    public function genres()
+ 
+    public function roles()
     {
-        return $this->belongsToMany(Genre::class, 'book_genres');
+        return $this->belongsToMany(Book::class, 'book_genres');
     }
 }
+ 
