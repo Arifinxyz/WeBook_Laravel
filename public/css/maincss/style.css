@@ -1,5 +1,5 @@
-body {
-    background-color: #ebebeb;
+.body {
+    background-color: #f0f0f0;
 }
 
 .book_card {
@@ -9,4 +9,42 @@ body {
    width: 15vh;
    height: calc(14vh * 1.5);
    object-fit: cover;
+}
+
+.main_container
+{
+    min-height: 100vh;
+}
+
+.login_card
+{
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    background-color: white;
+    width: 400px;
+    height: 400px;
+}
+
+.login_container
+{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hide
+{
+    display: none;
+}
+
+.input_form
+{
+    margin-bottom: 10px;
+    width: 100%;
 }
