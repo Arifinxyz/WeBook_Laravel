@@ -14,7 +14,10 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
-
+    public function form_register()
+    {
+        return view('auth.register');
+    }
    
     public function login(Request $request)
     {
@@ -31,5 +34,24 @@ class AuthController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function register()
+    {
+        $validatedData = $request->validate([
+            'name' => ['required', 'string'],
+            'email' => ['required', 'email', 'unique:users,email'],
+            'password' => ['required', 'confirmed', 'min:8'] 
+        ]);
+
+        $user = User::Create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => Hash::make($validatedData['password'])
+        ]);
+
+        Auth::Login($user);
+
+        return redirect()->route('/login')->with('success', 'Registration successful!');
     }
 }

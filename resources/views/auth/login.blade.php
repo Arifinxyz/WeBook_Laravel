@@ -1,6 +1,9 @@
 <x-layout>
     <div class="login_container">
-        <div class="login_card p-4">
+        <div class="login_card">
+            <div class="sign_form">
+              <h1>Login</h1>
+            </div>
             <form action="{{ route('login.process') }}" method="POST">
                 @csrf
                     <label for="email">Email</label>
@@ -19,3 +22,4 @@
         </div>
     </div>
 </x-layout>
+ 

@@ -22,7 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    
+    padding: 40px;
     background-color: white;
     width: 400px;
     height: 400px;
@@ -41,10 +41,37 @@
 .hide
 {
     display: none;
+
 }
 
-.input_form
-{
+.input_form {
     margin-bottom: 10px;
     width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2.5px solid rgb(119, 119, 119);
+    transition: all 0.3s ease;
+}
+
+.input_form:focus {
+    border-color: black;    
+    outline: none;
+}
+
+.input_form:active {
+    box-shadow: 0 0 8px 2px rgba(0, 0, 255, 0.6); 
+    border-color: black;
+    border-width: 3px;
+}
+
+.input_form:not(:active) {
+    transition: box-shadow 2s ease; 
+}
+.sign_form
+{
+    display: flex;
+    justify-content: center;
+    color: rgb(84, 84, 84);
+    margin-bottom: 20px;
 }
