@@ -36,7 +36,7 @@ class AuthController extends Controller
         ])->onlyInput('email');
     }
 
-    public function register()
+    public function register(Request $request)
     {
         $validatedData = $request->validate([
             'name' => ['required', 'string'],
@@ -50,8 +50,18 @@ class AuthController extends Controller
             'password' => Hash::make($validatedData['password'])
         ]);
 
-        Auth::Login($user);
+        Auth::login($user);
 
-        return redirect()->route('/login')->with('success', 'Registration successful!');
+        return redirect()->route('login')->with('success', 'Registration successful!');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout(); // Logout user dari sesi
+    
+        $request->session()->invalidate(); // Hapus sesi yang ada
+        $request->session()->regenerateToken(); // Regenerasi token CSRF
+    
+        return redirect('/login')->with('success', 'Anda berhasil logout.');
     }
 }

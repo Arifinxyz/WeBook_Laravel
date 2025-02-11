@@ -3,17 +3,51 @@
 }
 
 .book_card {
+    width: 150px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column; /* Susun elemen ke bawah */
+    justify-content: center; /* Pusatkan secara vertikal */
+    align-items: center; /* Pusatkan secara horizontal */
+    text-align: center; /* Pusatkan teks jika ada */
+    overflow: hidden;
+    
+}
+.book_card a
+{
+    text-decoration: none;
+
 }
 
 .book_cover {
-   width: 15vh;
-   height: calc(14vh * 1.5);
+   width: 130px;
+   height: calc(130px * 1.5);
    object-fit: cover;
+}
+
+.book_container
+{
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 3px rgba(0, 0, 0, 0.073);
+}
+
+.book_title p
+{
+    color: rgb(37, 37, 37);
 }
 
 .main_container
 {
     min-height: 100vh;
+}
+
+.comtainer
+{
+    width: 75vw;
+
 }
 
 .login_card
@@ -25,7 +59,7 @@
     padding: 40px;
     background-color: white;
     width: 400px;
-    height: 400px;
+    height: max-content ;
 }
 
 .login_container
@@ -67,7 +101,7 @@
 
 .input_form:not(:active) {
     transition: box-shadow 2s ease; 
-}
+}   
 .sign_form
 {
     display: flex;
@@ -75,3 +109,39 @@
     color: rgb(84, 84, 84);
     margin-bottom: 20px;
 }
+
+.sign_button {
+    background-color: rgb(0, 85, 255);
+    color: white;
+    width: 100%;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+ }
+ .password-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .password-container input {
+            width: 100%;
+            padding-right: 40px;
+        }
+        .password-container i {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            color: #aaa;
+        }
+        .password-container i:hover {
+            color: #555;
+        }
+
+.input_password 
+{
+    margin-bottom: 0px;
+}
+
