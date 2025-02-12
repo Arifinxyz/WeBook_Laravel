@@ -11,9 +11,9 @@ class Genre extends Model
     protected $guarded = [];
 
  
-    public function roles()
+    public function books()
     {
-        return $this->belongsToMany(Book::class, 'book_genres');
+        return $this->belongsToMany(Book::class, 'book_genres', 'genre_id', 'book_id');
     }
 
 }

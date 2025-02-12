@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -10,11 +11,14 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::orderBy('created_at', 'desc')->get();
-        return view('home',[ 'books' => $books]);
+        $genres = Genre::with('books')->get();
+        return view('home', compact('books', 'genres'));
     }
+    
     public function show($id)
 {
-    $book = Book::findOrFail($id);
+    $book = Book::with('genres')->findOrFail($id);
+
     return view('book.book_desc', compact('book'));
 }
     
