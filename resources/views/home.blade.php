@@ -1,8 +1,10 @@
 <x-layout>
+    <div class="container">
     <a href="/login">Login</a>
 
     <div class="book_container">
-        @if ($books)
+        <h5>Latest Book:</h5>
+        @if (!isset($books))
             @foreach ( $books as $book)
                 <div class="book_card">
                     <a href="/book_desc/{{ $book->id }}">
@@ -13,6 +15,9 @@
                     </a>
                 </div>
             @endforeach
+        @else
+        <p> Belum ada buku</p>
         @endif
+    </div>
     </div>
 </x-layout>

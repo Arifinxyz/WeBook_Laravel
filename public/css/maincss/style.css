@@ -34,7 +34,7 @@
     box-shadow: 5px 5px 0px 3px rgba(0, 0, 0, 0.073);
 }
 
-.book_title p
+.book_title p, .book_container h5
 {
     color: rgb(37, 37, 37);
 }
