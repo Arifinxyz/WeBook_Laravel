@@ -18,6 +18,11 @@
         @else
         <p> Belum ada buku</p>
         @endif
+        @if ($book_genres)
+            @foreach ($book_genres as $book_genres)
+                <p>{{ $book_genres->genre }}</p>
+            @endforeach
+        @endif
     </div>
     </div>
 </x-layout>
