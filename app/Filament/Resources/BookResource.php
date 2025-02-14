@@ -45,6 +45,7 @@ class BookResource extends Resource
                 FileUpload::make('content')
                     ->directory('book/content')
                     ->acceptedFileTypes(['application/pdf']),
+                TextInput::make('author'),
                 Select::make('genres')
                     ->searchable()
                     ->multiple()

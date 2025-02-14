@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <a href="/login">Login</a>
-
+         
         <div class="book_container">
             <h5>Latest Book:</h5>
             @if (isset($books))
