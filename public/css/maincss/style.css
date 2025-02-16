@@ -146,3 +146,10 @@
     margin-bottom: 0px;
 }
 
+
+.profile_button, .profile_button img
+{
+    width: 35x;
+    height: 35px;
+    border-radius: 100%;
+}
