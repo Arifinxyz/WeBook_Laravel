@@ -153,3 +153,10 @@
     height: 35px;
     border-radius: 100%;
 }
+
+.profile_pic
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}

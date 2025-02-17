@@ -18,16 +18,25 @@
         </div>
         <div class="btn-group">
             <a class="profile_button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="/img/profile.png" alt="">
+                @if (auth()->id())
+                <img src="{{ Auth::user()->profile_pic ? Storage::url('/img/user_profile/' . Auth::user()->profile_pic) : '/img/profile.png' }}" alt="">
+
+                @else
+                    <img src="/img/profile.png" alt="">
+                @endif
+
             </a>
 
             <ul class="dropdown-menu dropdown-menu-end pd-2">
+                <a href="/profile" class="dropdown-item">
+                    <h5>{{ Auth::user()->email }}</h5>
+                    <p>Lihat Selengkapnya</p>
+                </a>
                 
                 <hr>
                 <a href="" class="dropdown-item">History</a>
                 <a href="" class="dropdown-item">Favorite</a>
                 <hr>
-                <a href="/profile" class="dropdown-item">Profile</a>
                 <a href="/logout" class="dropdown-item">Logout</a>
             </ul>
         </div>

@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DataFavoritController;
 
 Route::get('/', [BookController::class, 'index'])->name('book.index');
+
+Route::view('/profile', 'profile');
 
 Route::get('/book_desc/{id}', [BookController::class, 'show'])->name('book.show');
 Route::get('/book/{id}/content', [BookController::class, 'content']);
@@ -22,3 +25,6 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::post('/add-favorit', [DataFavoritController::class, 'add_favorit'])->name('favorit.add');
 Route::delete('/delete-favorit', [DataFavoritController::class, 'delete_favorit'])->name('favorit.delete');
+
+Route::get('/profile', [ProfileController::class, 'show_favorit'])->name('profile');
+Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');

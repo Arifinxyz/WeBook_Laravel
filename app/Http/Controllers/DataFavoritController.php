@@ -28,4 +28,13 @@ class DataFavoritController extends Controller
         return back()->with('success', 'Buku berhasil dihapus dari favorit');
     }
     
+    public function show_favorit(Request $request)
+    {
+        // Mengambil data favorit pengguna dengan informasi buku terkait
+        $dataFavorit = DataFavorit::with('book')->where('user_id', auth()->id())->get();
+    
+        // Mengirim data ke view 'profile'
+        return view('profile', compact('dataFavorit'));
+    }
+    
 }
