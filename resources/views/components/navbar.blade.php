@@ -27,17 +27,31 @@
 
             </a>
 
-            <ul class="dropdown-menu dropdown-menu-end pd-2">
+            <ul class="user_menu dropdown-menu dropdown-menu-end">
+                @if (auth()->id())
+
                 <a href="/profile" class="dropdown-item">
                     <h5>{{ Auth::user()->email }}</h5>
                     <p>Lihat Selengkapnya</p>
+                   
+                  
                 </a>
                 
                 <hr>
-                <a href="" class="dropdown-item">History</a>
-                <a href="" class="dropdown-item">Favorite</a>
+                <a href="" class="dropdown-item"><i class="fa-solid fa-clock-rotate-left me-2"></i>History</a>
+                <a href="/favorite" class="dropdown-item"><i class="fa-solid fa-bookmark me-2"></i>Favorite</a>
                 <hr>
-                <a href="/logout" class="dropdown-item">Logout</a>
+                <a href="/logout" class="dropdown-item"><i class="fa-solid fa-share-from-square me-2"></i>Logout</a>
+                @else
+                <a href="/login" class="btn btn-primary dropdown-item"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
+                @endif
             </ul>
         </div>
 </nav>
+<style>
+    .user_menu
+    {
+        justify-content: center;
+        align-items: center;
+    }
+</style>

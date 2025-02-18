@@ -36,11 +36,11 @@ class BookResource extends Resource
                 FileUpload::make('cover')
                     ->image()
                     ->directory('book/covers')
-                    ->imageEditor()
                     ->imageEditorAspectRatios([
                         '3:4'
                     ]),
-                RichEditor::make('description'),
+                RichEditor::make('description')
+                ->maxLength(255),
                 TextInput::make('tittle'),
                 FileUpload::make('content')
                     ->directory('book/content')
@@ -52,7 +52,6 @@ class BookResource extends Resource
                     ->relationship('genres', 'genre')
                     ->preload(),
                 
-                TextInput::make('author'),
             ]);
     }
 

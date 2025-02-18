@@ -5,6 +5,8 @@
             <div class="col-6">
                 <img src="{{ Storage::url($book->cover) }}" alt="Book Cover" style="width: 300px;">
             </div>
+            @if (auth()->id())
+                
             @if (!$exist)
                 <form action="{{ route('favorit.add') }}" method="post">
                     @csrf
@@ -19,6 +21,9 @@
                     @method('DELETE')
                     <button type="submit">Hapus Favorit</button>
                 </form>
+            @endif
+            @else
+            <a href="/login">Login untuk menambahkan ke favorit</a>
             @endif
 
             <div class="col-6">

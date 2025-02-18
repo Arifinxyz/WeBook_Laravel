@@ -36,7 +36,7 @@ class ProfileController extends Controller
         $dataFavorit = DataFavorit::with('book')->where('user_id', auth()->id())->get();
     
         // Mengirim data ke view 'profile'
-        return view('profile', compact('dataFavorit'));
+        return view('user.profile', compact('dataFavorit'));
     }
     
 }

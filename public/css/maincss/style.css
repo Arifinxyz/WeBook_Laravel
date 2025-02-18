@@ -10,7 +10,8 @@
     justify-content: center; /* Pusatkan secara vertikal */
     align-items: center; /* Pusatkan secara horizontal */
     text-align: center; /* Pusatkan teks jika ada */
-    overflow: hidden;
+    margin-right: 5px;
+    padding: 5px;
     
 }
 .book_card a
@@ -30,15 +31,39 @@
     background-color: white;
     width: 100%;
     padding: 10px;
+    margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 5px 5px 0px 3px rgba(0, 0, 0, 0.073);
+}
+
+.book_inner_container
+{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: scroll;
 }
 
 .book_title p, .book_container h5
 {
     color: rgb(37, 37, 37);
 }
+.book_title {
+    width: 130px;
+    max-width: 130px;
+    white-space: nowrap;
+    text-align: start;
+}
+
+.book_title p {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 .main_container
 {

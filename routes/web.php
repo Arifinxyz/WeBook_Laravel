@@ -28,3 +28,5 @@ Route::delete('/delete-favorit', [DataFavoritController::class, 'delete_favorit'
 
 Route::get('/profile', [ProfileController::class, 'show_favorit'])->name('profile');
 Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+Route::get('/favorite', [DataFavoritController::class, 'show_favorit'])->name('profile');
