@@ -19,4 +19,9 @@ class Book extends Model
     {
         return $this->hasMany(DataFavorit::class, 'book_id');
     }
+
+    public function dataHistorys()
+    {
+        return $this->hasMany(DataHistory::class, 'book_id');
+    }
 }

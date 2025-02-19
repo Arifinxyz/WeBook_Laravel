@@ -185,3 +185,11 @@
     height: 200px;
     border-radius: 100%;
 }
+
+.book_desc_container
+{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 20px;
+}
