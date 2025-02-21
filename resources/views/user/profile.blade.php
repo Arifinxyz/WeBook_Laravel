@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row">
+        <div class="book_container">
             <div class="col-md-12">
                 <h1>Profile</h1>
                 <div class="profile_pic_container">
@@ -15,10 +15,11 @@
                 @endif
             </div>
         </div>
-    </div>
-<div class="favorit_container">
+<div class="book_container">
 
     @if ($dataFavorit)
+    <h5>Favorite Book:</h5>
+    <div class="book_inner_container">
         @foreach ($dataFavorit as $book)
         <div class="book_card">
             <a href="/book_desc/{{ $book->book_id }}">
@@ -29,6 +30,26 @@
             </a>
         </div>
         @endforeach
+    </div>
+    @endif
+</div>
+
+<div class="book_container">
+    
+    @if ($dataHistory)
+    <h5>History:</h5>
+    <div class="book_inner_container">
+        @foreach ($dataHistory as $book)
+        <div class="book_card">
+            <a href="/book_desc/{{ $book->book_id }}">
+                <img src="{{ Storage::url($book->book->cover) }}" alt="" class="book_cover">
+                <div class="book_title">
+                    <p>{{ $book->book->tittle }}</p>
+                </div>
+            </a>
+        </div>
+        @endforeach
+    </div>
     @endif
 </div>
 
@@ -51,6 +72,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
     <script>

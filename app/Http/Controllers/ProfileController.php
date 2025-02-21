@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\user;
 use App\Models\DataFavorit;
+use App\Models\DataHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -30,13 +31,19 @@ class ProfileController extends Controller
         return response()->json(['success' => false], 400);
     }
 
-    public function show_favorit(Request $request)
+    public function profile(Request $request)
     {
-        // Mengambil data favorit pengguna dengan informasi buku terkait
+        $dataHistory = DataHistory::with('book')
+        ->where('user_id', auth()->id())
+        ->orderBy('updated_at', 'desc')
+        ->get();
+    
         $dataFavorit = DataFavorit::with('book')->where('user_id', auth()->id())->get();
     
         // Mengirim data ke view 'profile'
-        return view('user.profile', compact('dataFavorit'));
+        return view('user.profile', compact('dataFavorit', 'dataHistory'));
     }
+
+    
     
 }

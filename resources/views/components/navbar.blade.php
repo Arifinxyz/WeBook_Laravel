@@ -9,13 +9,17 @@
                     <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Features</a>
+                    <a class="nav-link text-light" href="/book">Book</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Pricing</a>
+                    <a class="nav-link text-light" href="/genre">Genre</a>
                 </li>
             </ul>
         </div>
+        <form class="d-flex ms-auto " action="{{ route('book.search') }}" method="GET">
+            <input class="form-control me-2" type="search" name="query" placeholder="Search Book.." aria-label="Search">
+            <button class="btn btn-outline-light me-2" type="submit">Search</button>
+        </form>
         <div class="btn-group">
             <a class="profile_button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 @if (auth()->id())

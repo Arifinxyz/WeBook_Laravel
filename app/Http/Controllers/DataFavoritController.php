@@ -36,5 +36,5 @@ class DataFavoritController extends Controller
         // Mengirim data ke view 'profile'
         return view('user.favorite', compact('dataFavorit'));
     }
-    
+~
 }

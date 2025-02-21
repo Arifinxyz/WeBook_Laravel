@@ -24,6 +24,7 @@
    width: 130px;
    height: calc(130px * 1.5);
    object-fit: cover;
+   background-color: lightgray;
 }
 
 .book_container

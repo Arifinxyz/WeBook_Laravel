@@ -9,7 +9,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DataFavoritController;
 use App\Http\Controllers\DataHistoryController;
 
-Route::get('/', [BookController::class, 'index'])->name('book.index');
+Route::get('/', [BookController::class, 'index']);
+Route::get('/book', [BookController::class, 'index'])->name('book');
 
 Route::view('/profile', 'profile');
 
@@ -28,7 +29,12 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::post('/add-favorit', [DataFavoritController::class, 'add_favorit'])->name('favorit.add');
 Route::delete('/delete-favorit', [DataFavoritController::class, 'delete_favorit'])->name('favorit.delete');
 
-Route::get('/profile', [ProfileController::class, 'show_favorit'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
 Route::get('/favorite', [DataFavoritController::class, 'show_favorit'])->name('favorite');
+
+Route::get('/search', [BookController::class, 'search'])->name('book.search');
+
+Route::get('/genre', [GenreController::class, 'genre_list'])->name('genre.list');
+Route::get('/genre/{id}', [GenreController::class, 'index'])->name('genre');
