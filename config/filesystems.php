@@ -36,6 +36,7 @@ return [
             'serve' => true,
             'throw' => false,
             'report' => false,
+            'upload_max_filesize' => 50 * 1024,
         ],
 
         'public' => [

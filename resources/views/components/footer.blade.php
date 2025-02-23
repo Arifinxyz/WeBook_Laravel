@@ -48,39 +48,31 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
-              <h6 class="text-uppercase fw-bold">Company name</h6>
+              <h6 class="text-uppercase fw-bold"><img src="img/WeBookWhite.png" alt=""
+                style="width: 7em;"></a></h6>
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
-            </div>
+                Welcome to WeBook, your platform for connecting with fellow book enthusiasts.</p></div>
             <!-- Grid column -->
   
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Products</h6>
+              <h6 class="text-uppercase fw-bold">Parter</h6>
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
               <p>
-                <a href="#!" class="text-white">MDBootstrap</a>
+                <a href="#!" class="text-white">Komikmu</a>
               </p>
               <p>
-                <a href="#!" class="text-white">MDWordPress</a>
+                <a href="#!" class="text-white">Sipus Digi</a>
               </p>
-              <p>
-                <a href="#!" class="text-white">BrandFlow</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Bootstrap Angular</a>
-              </p>
+              
             </div>
             <!-- Grid column -->
   
@@ -93,17 +85,15 @@
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
               <p>
-                <a href="#!" class="text-white">Your Account</a>
+                <a href="#!" class="text-white">Home</a>
               </p>
               <p>
-                <a href="#!" class="text-white">Become an Affiliate</a>
+                <a href="#!" class="text-white">Genre</a>
               </p>
               <p>
-                <a href="#!" class="text-white">Shipping Rates</a>
+                <a href="#!" class="text-white">Profile</a>
               </p>
-              <p>
-                <a href="#!" class="text-white">Help</a>
-              </p>
+         
             </div>
             <!-- Grid column -->
   
@@ -115,10 +105,8 @@
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
-              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              <p><i class="fas fa-envelope mr-3"></i> email@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +62-000-0000-00</p>
             </div>
             <!-- Grid column -->
           </div>

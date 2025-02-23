@@ -1,11 +1,12 @@
 <x-layout>
     <div class="container">
-        <div class="book_container">
-            <div class="col-md-12">
-                <h1>Profile</h1>
+        <div class="book_container p-3">
+            <h2 class="mb-2">{{ auth()->user()->name }}  profile</h2>
+
+            <div class="profile_container d-flex flex-column align-items-center">
                 <div class="profile_pic_container">
+                    <button type="button" onclick="document.getElementById('upload_profile_pic').click()"><i class="fa-solid fa-camera"></i></button>
                     <img src="{{ Auth::user()->profile_pic ? Storage::url('img/user_profile/' . Auth::user()->profile_pic) : asset('img/profile.png') }}" alt="" class="profile_pic">
-                    <button type="button" onclick="document.getElementById('upload_profile_pic').click()">Edit</button>
                     <input type="file" id="upload_profile_pic" accept="image/*" style="display: none;">
                     
                 </div>

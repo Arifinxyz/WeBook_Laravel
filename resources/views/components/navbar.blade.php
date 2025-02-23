@@ -2,7 +2,7 @@
     {{ Request::is('register') ? 'style=display:none;' : false }}>
     <div class="container-fluid">
         <a class="navbar-brand me-5 ms-3 mb-1" href="/"><img src="img/WeBookWhite.png" alt=""
-                style="width: 5vw;"></a>
+                style="width: 5em;"></a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -17,7 +17,7 @@
             </ul>
         </div>
         <form class="d-flex ms-auto " action="{{ route('book.search') }}" method="GET">
-            <input class="form-control me-2" type="search" name="query" placeholder="Search Book.." aria-label="Search">
+            <input class="form-control me-2 bg-transparent text-light" type="search" name="query" placeholder="Search Book.." aria-label="Search">
             <button class="btn btn-outline-light me-2" type="submit">Search</button>
         </form>
         <div class="btn-group">

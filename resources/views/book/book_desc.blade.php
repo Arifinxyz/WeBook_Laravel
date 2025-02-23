@@ -4,7 +4,7 @@
         <div class="book_container p-3">
             <div class="book_desc_container">
                 <div class="book_desc">
-                    <img src="{{ Storage::url($book->cover) }}" alt=""     style="width: 300px; height: calc(300px * 1.5); object-fit: cover; background-color: lightgray;">
+                    <img src="{{ Storage::url($book->cover) }}" alt="" style="width: 300px; height: calc(300px * 1.5); object-fit: cover; background-color: lightgray;" loading="lazy">
                     <div class="d-flex mt-2">
                     <a href="/book/{{ $book->id }}/content" class="btn btn-primary me-2">baca buku</a>
 

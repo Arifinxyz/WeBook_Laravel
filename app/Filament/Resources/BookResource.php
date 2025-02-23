@@ -44,6 +44,8 @@ class BookResource extends Resource
                 TextInput::make('tittle'),
                 FileUpload::make('content')
                     ->directory('book/content')
+                    ->maxSize(102400)
+                    ->rules(['max:102400']) 
                     ->acceptedFileTypes(['application/pdf']),
                 TextInput::make('author'),
                 Select::make('genres')
@@ -51,6 +53,7 @@ class BookResource extends Resource
                     ->multiple()
                     ->relationship('genres', 'genre')
                     ->preload(),
+                
                 
             ]);
     }

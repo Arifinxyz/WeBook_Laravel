@@ -53,10 +53,12 @@ class BookController extends Controller
             }
         }
        
-
+        $exist = DataFavorit::where('user_id', auth()->id())
+        ->where('book_id', $id)
+        ->exists();
         $book = Book::findOrFail($id);
         $pdfUrl = $book->content;
-        return view('book.book_content', compact('book', 'pdfUrl'));
+        return view('book.book_content', compact('book', 'pdfUrl', 'exist'));
     }
 
     public function search(Request $request)
