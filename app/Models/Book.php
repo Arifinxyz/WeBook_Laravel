@@ -1,10 +1,10 @@
-<?php
+mPLP lm..mmmolllyf<?php
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+on 
 class Book extends Model
 {
     use HasFactory;
